@@ -20,6 +20,7 @@
 
 <a href="logout">Logout</a>
 <a href="editProfile.jsp">Chỉnh sửa thông tin</a>
+<a href="productList.jsp">sản phẩm</a>
 </body>
 </html>
 
