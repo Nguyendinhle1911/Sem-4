@@ -5,6 +5,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 import model.User;
 
 import java.io.IOException;
@@ -24,8 +25,12 @@ public class LoginServlet extends HttpServlet {
 
         //Step 3
         if(isValid){
-            req.setAttribute("username",username);
-            req.getRequestDispatcher("welcome.jsp").forward(req,resp);
+//            req.setAttribute("username",username);
+//            req.getRequestDispatcher("welcome.jsp").forward(req,resp);
+            HttpSession session = req.getSession();
+            session.setAttribute("username",username);
+            resp.sendRedirect("welcome.jsp");
+
         }else {
             req.setAttribute("error","Sai username hoac password");
             req.getRequestDispatcher("login.jsp").forward(req,resp);
