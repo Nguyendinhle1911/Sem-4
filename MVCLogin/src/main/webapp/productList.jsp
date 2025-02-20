@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page import="model.Product" %>
+<%@taglib uri="http://jakarta.apache.org/taglibs/standard/scriptfree" prefix="c"%>
 <%@ page import="java.util.List" %>
 <%
     String action = request.getParameter("action");
