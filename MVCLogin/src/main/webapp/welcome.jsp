@@ -53,6 +53,7 @@
             <a href="productList.jsp" class="btn btn-success btn-custom">Manage Products JSP MVC Model 1 </a>
             <a href="productListJstl.jsp" class="btn btn-success btn-custom">Manage Products JSP MVC Model 1 jstl </a>
             <a href="products" class="btn btn-success btn-custom">Manage Products JSP MVC model 2 </a>
+            <a href="test.jsp" class="btn btn-success btn-custom">Manage Products test </a>
             <a href="productv3.jsp" class="btn btn-success btn-custom">Manage Products jstl MVC Model v3  </a>
 
         </div>

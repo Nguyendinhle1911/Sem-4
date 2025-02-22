@@ -1,55 +1,50 @@
 package controller;
 
+import model.Product;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import model.Product;
+import util.JwtUtil;
 
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.List;
 
-@WebServlet(name = "ProductServlet", value = "/products")
+@WebServlet(name = "ProductServlet", value = "/product")
 public class ProductServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         try {
-            List<Product> productList = Product.getAllProducts();
-            req.setAttribute("productList", productList);
-        } catch (Exception e) {
+            List<Product> products = Product.getAllProducts();
+            req.setAttribute("products", products);
+            req.getRequestDispatcher("product.jsp").forward(req, resp);
+        } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
-            req.setAttribute("error", "Error loading products");
+            throw new RuntimeException(e);
         }
-        req.getRequestDispatcher("product.jsp").forward(req, resp);
     }
-
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String action = req.getParameter("action");
-
-        if ("add".equals(action)) {
-            String name = req.getParameter("name");
-            double price = Double.parseDouble(req.getParameter("price"));
-            String description = req.getParameter("description");
-
-            Product product = new Product(name, price, description);
-            Product.addProduct(product);
-
-        } else if ("update".equals(action)) {
-            int id = Integer.parseInt(req.getParameter("id"));
-            String name = req.getParameter("name");
-            double price = Double.parseDouble(req.getParameter("price"));
-            String description = req.getParameter("description");
-
-            Product product = new Product(id, name, price, description);
-            Product.updateProduct(product);
-
-        } else if ("delete".equals(action)) {
-            int id = Integer.parseInt(req.getParameter("id"));
-            Product.deleteProduct(id);
+        try {
+            if ("add".equals(action)) {
+                String name = req.getParameter("name");
+                int quantity = Integer.parseInt(req.getParameter("quantity"));
+                Product.addProduct(new Product(0, name, quantity));
+            } else if ("update".equals(action)) {
+                int id = Integer.parseInt(req.getParameter("id"));
+                String name = req.getParameter("name");
+                int quantity = Integer.parseInt(req.getParameter("quantity"));
+                Product.updateProduct(new Product(id, name, quantity));
+            } else if ("delete".equals(action)) {
+                int id = Integer.parseInt(req.getParameter("id"));
+                Product.deleteProduct(id);
+            }
+        } catch (SQLException | ClassNotFoundException e) {
+            throw new RuntimeException(e);
         }
-
-        resp.sendRedirect("products");
+        resp.sendRedirect("product.jsp");
     }
 }

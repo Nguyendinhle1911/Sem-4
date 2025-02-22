@@ -1,127 +1,162 @@
-<%@ page import="model.Product" %>
+<%--
+  Created by IntelliJ IDEA.
+  User: Nguyen Trung Thanh
+  Date: 15/02/2025
+  Time: 11:42 SA
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="java.util.List" %>
+<%@ page import="model.Product" %>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Product Management</title>
 
-    <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-    <script>
-        function confirmAction(message, form) {
-            if (confirm(message)) {
-                form.submit();
-            }
+    <style>
+        body {
+            background-color: #f0f2f5;
         }
-    </script>
+        .container {
+            margin-top: 50px;
+        }
+        .card {
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .navbar {
+            padding: 10px 20px;
+        }
+        .btn-custom {
+            border-radius: 8px;
+            padding: 10px 20px;
+            transition: all 0.3s ease;
+        }
+        .btn-custom:hover {
+            transform: scale(1.05);
+        }
+    </style>
 </head>
 <body>
-<div class="container">
-    <h1 class="text-center text-primary">Product Management</h1>
-    <a href="welcome.jsp" class="btn btn-primary mb-3">Back to Home</a>
 
-    <!-- Add Product Form -->
-    <form action="products" method="post" class="mb-4" onsubmit="return confirm('Are you sure you want to add this product?');">
-        <input type="hidden" name="action" value="add">
-        <div class="mb-3">
-            <label class="form-label">Product Name</label>
-            <input type="text" name="name" class="form-control" placeholder="Enter product name" required>
-        </div>
-        <div class="mb-3">
-            <label class="form-label">Price</label>
-            <input type="number" name="price" class="form-control" placeholder="Enter product price" required>
-        </div>
-        <div class="mb-3">
-            <label class="form-label">Description</label>
-            <textarea name="description" class="form-control" placeholder="Enter product description" required></textarea>
-        </div>
-        <button type="submit" class="btn btn-success w-100">Add Product</button>
-    </form>
+<!-- Navbar -->
+<nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+        <a class="navbar-brand" href="welcome.jsp"><i class="fa fa-home"></i> Home</a>
+        <form method="get" action="logout">
+            <button type="submit" class="btn btn-danger btn-custom" onclick="return confirm('Are you sure you want to logout?');">
+                <i class="fa fa-sign-out-alt"></i> Logout
+            </button>
+        </form>
+    </div>
+</nav>
 
-    <!-- Product List -->
-    <h1 class="text-center text-primary">Product List</h1>
-    <table class="table table-bordered table-hover">
-        <thead class="table-primary">
-        <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Price</th>
-            <th>Description</th>
-            <th>Actions</th>
-        </tr>
-        </thead>
-        <tbody>
+<!-- Main Container -->
+<div class="container d-flex justify-content-center">
+    <div class="card w-100">
+        <h2 class="text-center mb-4">Manage Products 🛒</h2>
+
+        <!-- Add Product Form -->
+        <h4>Add Product</h4>
+        <form action="product" method="post" class="row g-3">
+            <input type="hidden" name="action" value="add">
+            <div class="col-md-5">
+                <input type="text" class="form-control" name="name" placeholder="Name" required>
+            </div>
+            <div class="col-md-4">
+                <input type="number" class="form-control" name="quantity" placeholder="Quantity" required>
+            </div>
+            <div class="col-md-3">
+                <button type="submit" class="btn btn-success btn-custom w-100"><i class="fa fa-plus"></i> Add New</button>
+            </div>
+        </form>
+
+        <!-- Update Product Form -->
         <%
-            List<Product> productList = (List<Product>) request.getAttribute("productList");
-            if (productList != null && !productList.isEmpty()) {
-                for (Product product : productList) {
+            if (request.getParameter("id") != null) {
         %>
-        <tr>
-            <td><%= product.getId() %></td>
-            <td><%= product.getName() %></td>
-            <td><%= product.getPrice() %> $</td>
-            <td><%= product.getDescription() %></td>
-            <td>
-                <!-- Delete Product -->
-                <form action="products" method="post" class="d-inline" onsubmit="event.preventDefault(); confirmAction('Are you sure you want to delete this product?', this);">
-                    <input type="hidden" name="action" value="delete">
-                    <input type="hidden" name="id" value="<%= product.getId() %>">
-                    <button type="submit" class="btn btn-delete btn-sm">Delete</button>
-                </form>
+        <h4 class="mt-4">Update Product</h4>
+        <form action="product" method="post" class="row g-3">
+            <input type="hidden" name="action" value="update">
+            <input type="hidden" name="id" value="<%= request.getParameter("id") %>">
+            <div class="col-md-5">
+                <input type="text" class="form-control" name="name" value="<%= request.getParameter("name") %>" required>
+            </div>
+            <div class="col-md-4">
+                <input type="number" class="form-control" name="quantity" value="<%= request.getParameter("quantity") %>" required>
+            </div>
+            <div class="col-md-3">
+                <button type="submit" class="btn btn-primary btn-custom w-100"><i class="fa fa-edit"></i> Update</button>
+            </div>
+        </form>
+        <%
+            }
+        %>
 
-                <!-- Update Product -->
-                <button class="btn btn-update btn-sm" data-bs-toggle="modal" data-bs-target="#updateModal<%= product.getId() %>">Update</button>
-
-                <!-- Update Modal -->
-                <div class="modal fade" id="updateModal<%= product.getId() %>" tabindex="-1" aria-labelledby="updateLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title">Update Product</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                            </div>
-                            <div class="modal-body">
-                                <form action="products" method="post" onsubmit="return confirm('Are you sure you want to update this product?');">
-                                    <input type="hidden" name="action" value="update">
-                                    <input type="hidden" name="id" value="<%= product.getId() %>">
-                                    <div class="mb-3">
-                                        <label class="form-label">Product Name</label>
-                                        <input type="text" name="name" class="form-control" value="<%= product.getName() %>" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label class="form-label">Price</label>
-                                        <input type="number" name="price" class="form-control" value="<%= product.getPrice() %>" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label class="form-label">Description</label>
-                                        <textarea name="description" class="form-control" required><%= product.getDescription() %></textarea>
-                                    </div>
-                                    <button type="submit" class="btn btn-primary w-100">Save Changes</button>
-                                </form>
-                            </div>
-                        </div>
+        <!-- Product List Table -->
+        <h4 class="mt-4">Product List</h4>
+        <table class="table table-hover table-bordered text-center ">
+            <thead class="table-dark">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Quantity</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            <%
+                try {
+                    List<Product> products = (List<Product>) request.getAttribute("products");
+                    if (products == null) {
+                        response.sendRedirect("product");
+                        return;
+                    }
+                    for (Product product : products) {
+            %>
+            <tr>
+                <td><%= product.getId() %></td>
+                <td><%= product.getName() %></td>
+                <td><%= product.getQuantity() %></td>
+                <td>
+                    <div class="d-flex justify-content-center">
+                        <form action="product" method="get">
+                            <input type="hidden" name="id" value="<%= product.getId() %>">
+                            <input type="hidden" name="name" value="<%= product.getName() %>">
+                            <input type="hidden" name="quantity" value="<%= product.getQuantity() %>">
+                            <button type="submit" class="btn btn-warning btn-sm mx-2">
+                                <i class="fa fa-edit"></i> Edit
+                            </button>
+                        </form>
+                        <form action="product" method="post">
+                            <input type="hidden" name="action" value="delete">
+                            <input type="hidden" name="id" value="<%= product.getId() %>">
+                            <button type="submit" class="btn btn-danger btn-sm mx-2" onclick="return confirm('Are you sure you want to delete this product?');">
+                                <i class="fa fa-trash"></i> Delete
+                            </button>
+                        </form>
                     </div>
-                </div>
-            </td>
-        </tr>
-        <%
-            }
-        } else {
-        %>
-        <tr>
-            <td colspan="5" class="text-center">No products available.</td>
-        </tr>
-        <%
-            }
-        %>
-        </tbody>
-    </table>
+                </td>
+
+            </tr>
+            <%
+                    }
+                } catch (Exception e) {
+                    out.println("<p class='text-danger'>Error: " + e.getMessage() + "</p>");
+                }
+            %>
+            </tbody>
+        </table>
+    </div>
 </div>
 
-<!-- Bootstrap 5 JS -->
+<!-- Bootstrap Scripts -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
