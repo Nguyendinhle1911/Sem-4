@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="ATM:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4755a8ad-c8ef-4885-937e-5d0ff3bcde8f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/LoginServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/TransactionHistoryServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/TransferServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/WithdrawServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dao/DatabaseConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dao/TransactionDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dao/UserDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/Transaction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/home.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/transfer.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/withdraw.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MVCLogin1/src/main/java/controller/ATMController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ATM_demo/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ATM_demo/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ATM_demo/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ATM_demo/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ATM_demo/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ATM_demo/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ATM_demo/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ATM_demo/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ATM_demo/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ATM_demo/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ATM_demo/src/main/java/org/example/atm_demo/HelloApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ATM_demo/src/main/java/org/example/atm_demo/HelloResource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ATM_demo/src/main/resources/META-INF/beans.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ATM_demo/src/main/resources/META-INF/persistence.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MVCLogin/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MVCLogin/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MVCLogin/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MVCLogin/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MVCLogin/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MVCLogin/.idea/webContexts.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MVCLogin/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MVCLogin/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MVCLogin/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MVCLogin/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MVCLogin/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MVCLogin/src/main/java/controller/LoginServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MVCLogin/src/main/java/controller/LogoutServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MVCLogin/src/main/java/controller/ProductServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MVCLogin/src/main/java/model/Product.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MVCLogin/src/main/java/model/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MVCLogin/src/main/java/org/example/mvclogin/HelloServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MVCLogin/src/main/java/util/DBUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MVCLogin/src/main/resources/META-INF/beans.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MVCLogin/src/main/resources/META-INF/persistence.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MVCLogin/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MVCLogin/src/main/webapp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MVCLogin/src/main/webapp/login.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MVCLogin/src/main/webapp/loginv3.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MVCLogin/src/main/webapp/product.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MVCLogin/src/main/webapp/productList.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MVCLogin/src/main/webapp/productListJstl.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MVCLogin/src/main/webapp/productv3.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MVCLogin/src/main/webapp/test.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MVCLogin/src/main/webapp/welcome.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MVCLogin_JWT/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MVCLogin_JWT/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MVCLogin_JWT/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MVCLogin_JWT/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MVCLogin_JWT/.idea/runConfigurations/Tomcat_11_0_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MVCLogin_JWT/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MVCLogin_JWT/.idea/webContexts.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MVCLogin_JWT/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MVCLogin_JWT/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MVCLogin_JWT/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MVCLogin_JWT/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MVCLogin_JWT/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MVCLogin_JWT/src/main/java/controller/LoginServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MVCLogin_JWT/src/main/java/controller/LogoutServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MVCLogin_JWT/src/main/java/controller/ProductServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MVCLogin_JWT/src/main/java/filter/JwtFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MVCLogin_JWT/src/main/java/model/Product.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MVCLogin_JWT/src/main/java/model/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MVCLogin_JWT/src/main/java/org/example/mvclogin/HelloServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MVCLogin_JWT/src/main/java/util/DBUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MVCLogin_JWT/src/main/java/util/JwtUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MVCLogin_JWT/src/main/resources/META-INF/beans.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MVCLogin_JWT/src/main/resources/META-INF/persistence.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MVCLogin_JWT/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MVCLogin_JWT/src/main/webapp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MVCLogin_JWT/src/main/webapp/login.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MVCLogin_JWT/src/main/webapp/product.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MVCLogin_JWT/src/main/webapp/productjstl.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MVCLogin_JWT/src/main/webapp/welcome.jsp" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Jsp File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2tWAtab53jussa6bbFVCIrqAiuv" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Tomcat Server.Tomcat 11.0.3.executor": "Run",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="Tomcat 11.0.3" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 11.0.3" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/ATM_war_exploded/" />
+      <deployment>
+        <artifact name="ATM:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/ATM_war_exploded" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="75d5e056-1be8-45c2-8723-e0dd34def180" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="ATM:war exploded" />
+        </option>
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.17011.79" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.17011.79" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4755a8ad-c8ef-4885-937e-5d0ff3bcde8f" name="Changes" comment="" />
+      <created>1740457673767</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1740457673767</updated>
+      <workItem from="1740457674910" duration="299000" />
+      <workItem from="1740458014668" duration="2304000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
