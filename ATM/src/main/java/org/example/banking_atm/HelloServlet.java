@@ -1,4 +1,4 @@
-package org.example.atm;
+package org.example.banking_atm;
 
 import java.io.*;
 
