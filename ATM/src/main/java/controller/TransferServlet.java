@@ -1,6 +1,6 @@
 package controller;
 
-import dao.TransactionDAO;
+import model.TransactionDAO;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;

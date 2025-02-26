@@ -1,5 +1,5 @@
-package dao;
-import model.User;
+package model;
+
 import java.sql.*;
 
 public class UserDAO {

@@ -1,5 +1,5 @@
 package controller;
-import dao.UserDAO;
+import model.UserDAO;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
